@@ -1,0 +1,105 @@
+import { motion } from 'framer-motion';
+import { ArrowRight, X, LogIn } from 'lucide-react';
+import type { Company, Lang } from '@/data/companies';
+import { uiText } from '@/data/companies';
+
+type Props = {
+  company: Company;
+  lang: Lang;
+  onClose: () => void;
+};
+
+export default function CompanyPanel({ company, lang, onClose }: Props) {
+  const titleLines = company.title[lang].split('\n');
+
+  return (
+    <motion.div
+      className="relative flex h-full w-full flex-col overflow-y-auto px-5 py-6 sm:px-10 sm:py-10 lg:px-16 lg:py-12"
+      style={{ backgroundColor: company.color }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
+      {/* close button (mobile / fallback) */}
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label={uiText.close[lang]}
+        className="focus-ring absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center text-white transition-opacity hover:opacity-60 lg:hidden"
+      >
+        <X className="h-6 w-6" strokeWidth={1.5} />
+      </button>
+
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+        className="flex flex-col"
+      >
+        {/* small logo */}
+        <div className="mb-6 flex h-12 w-12 items-center justify-center border border-white/70 font-display text-xs font-bold tracking-widest text-white">
+          {company.shortName.slice(0, 2)}
+        </div>
+
+        {/* big two-line title */}
+        <h2 className="font-display text-[40px] font-extralight leading-[0.98] tracking-[-0.02em] text-white sm:text-[56px] lg:text-[72px] xl:text-[96px]">
+          {titleLines.map((line, i) => (
+            <span key={i} className="block">
+              {line}
+            </span>
+          ))}
+        </h2>
+
+        {/* description + vertical line */}
+        <div className="mt-6 flex max-w-[760px] items-stretch gap-5 sm:mt-8 sm:gap-8">
+          <p className="font-display text-[16px] font-light leading-[1.6] text-white/90 sm:text-[18px] lg:text-[20px] xl:text-[22px]">
+            {company.description[lang]}
+          </p>
+          <div
+            className="hidden w-px shrink-0 bg-white/30 sm:block"
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* links */}
+        <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:items-center sm:gap-8">
+          {/* visit link */}
+          <a
+            href={company.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring group inline-flex items-center gap-3 self-start"
+          >
+            <span className="font-display text-[14px] font-bold tracking-[0.18em] text-white uppercase sm:text-[16px]">
+              {uiText.visit[lang]}
+            </span>
+            <motion.span
+              whileHover={{ x: 8 }}
+              transition={{ type: 'spring', stiffness: 350, damping: 28 }}
+              className="inline-flex"
+            >
+              <ArrowRight className="h-5 w-5 text-white" strokeWidth={1.5} />
+            </motion.span>
+          </a>
+
+          {/* partner login (optional) */}
+          {company.partnerLogin && (
+            <a
+              href={company.partnerLogin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring group inline-flex items-center gap-2 self-start border border-white/40 px-4 py-2 transition-colors hover:bg-white/10"
+            >
+              <LogIn className="h-4 w-4 text-white" strokeWidth={1.5} />
+              <span className="font-display text-[13px] font-bold tracking-[0.18em] text-white uppercase sm:text-[14px]">
+                {uiText.partnerLogin[lang]}
+              </span>
+            </a>
+          )}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
