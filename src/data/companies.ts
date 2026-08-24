@@ -19,6 +19,8 @@ export type Company = {
   website: string;
   /** optional partner login URL (e.g. MySki) */
   partnerLogin?: string;
+  /** if true, the visit link shows a "coming soon" popup instead of navigating */
+  comingSoon?: boolean;
 };
 
 export type HoldingInfo = {
@@ -60,7 +62,7 @@ export const companies: Company[] = [
       en: 'We mobilize the power of digital finance for a sustainable future and net-zero carbon goals. With our advanced blockchain infrastructure and transparent verification mechanisms, we strip carbon credit trading of complexity and transform it into an accessible and reliable global marketplace. We directly connect organizations seeking to neutralize their carbon footprint with high-quality verified climate projects, making the entire process — from credit generation to retirement — end-to-end traceable. By combining environmental responsibility with the liquidity and speed of digital assets, we reshape climate finance. Transform the future, neutralize your footprint, add value to the planet.',
       de: 'Wir mobilisieren die Kraft der digitalen Finanzwelt für eine nachhaltige Zukunft und Netto-Null-Klimaziele. Mit unserer fortschrittlichen Blockchain-Infrastruktur und transparenten Verifikationsmechanismen befreien wir den Handel mit CO2-Krediten von Komplexität und verwandeln ihn in einen zugänglichen und verlässlichen globalen Marktplatz. Wir verbinden Organisationen, die ihren CO2-Fußabdruck neutralisieren möchten, direkt mit hochwertigen verifizierten Klimaprojekten und machen den gesamten Prozess — von der Kreditgenerierung bis zum Retirement — durchgängig nachverfolgbar. Durch die Verbindung von ökologischer Verantwortung mit der Liquidität und Geschwindigkeit digitaler Vermögenswerte gestalten wir die Klimafinanzierung neu. Gestalten Sie die Zukunft, neutralisieren Sie Ihren Fußabdruck, schaffen Sie Mehrwert für den Planeten.',
     },
-    color: '#A56B5B',
+    color: '#D9846B',
     height: 100,
     logo: '/logo.svg',
     website: 'https://carbonited.com/',
@@ -75,7 +77,7 @@ export const companies: Company[] = [
       en: 'Are you ready to step into snow-capped peaks and the freedom of the slopes? Not just an app; your most reliable companion on the mountain, your performance coach, and a global community inviting you to push your limits. From live slope conditions to instant snow reports, from your maximum speed to slope analysis, all the data you need is now in your pocket. From your first run to the last turn of the day, record every track you leave, compete with thousands of skiers worldwide, and keep the rhythm of the mountain. Record your passion, push the limits, own the summit.',
       de: 'Bereit, in schneebedeckte Gipfel und die Freiheit der Pisten zu treten? Nicht nur eine App; Ihr zuverlässigster Begleiter auf dem Berg, Ihr Leistungscoach und eine globale Gemeinschaft, die Sie einlädt, Ihre Grenzen zu überschreiten. Von Live-Pistenbedingungen bis zu sofortigen Schneeberichten, von Ihrer Höchstgeschwindigkeit bis zur Pistenanalyse — alle Daten, die Sie benötigen, sind jetzt in Ihrer Tasche. Vom ersten Abstieg bis zur letzten Kurve des Tages: Zeichnen Sie jede Spur auf, treten Sie mit Tausenden von Skifahrern weltweit in den Wettbewerb und halten Sie den Rhythmus des Berges. Zeichnen Sie Ihre Leidenschaft auf, überschreiten Sie die Grenzen, werden Sie zum Herrscher des Gipfels.',
     },
-    color: '#B8995C',
+    color: '#D9A752',
     height: 100,
     logo: '/logo.svg',
     website: 'https://demo.myski.com.tr/landingpage.html',
@@ -91,7 +93,7 @@ export const companies: Company[] = [
       en: 'Beyond screens, we design end-to-end digital broadcasting experiences that bring intelligence and functionality to every space. From outdoor advertising to hospitality venues, from commercial centers to mobile transit networks and large dealer chains, we are present at every point where life flows. We do not just develop software; we design, produce, and integrate bespoke hardware tailored to each project\u2019s architecture. With our AI-powered media management infrastructure, we manage thousands of points — from a screen inside a taxi to massive city media — from a single center, seamlessly, intelligently, and in real time. From concept to custom hardware production, from content streaming to on-site installation, we bring all processes of digital broadcasting under one roof. Powerful hardware, smart content, uninterrupted access: shape the future of digital broadcasting.',
       de: 'Über Bildschirme hinaus gestalten wir End-to-End digitale Rundfunk-Erlebnisse, die jedem Raum Intelligenz und Funktionalität verleihen. Von Außenwerbung über Beherbergungsbetriebe, von Einkaufszentren bis zu mobilen Verkehrsnetzen und großen Händlerketten — wir sind überall präsent, wo das Leben stattfindet. Wir entwickeln nicht nur Software; wir entwerfen, produzieren und integrieren maßgeschneiderte Hardware, die auf die Architektur jedes Projekts zugeschnitten ist. Mit unserer KI-gestützten Medienmanagement-Infrastruktur verwalten wir Tausende von Standorten — von einem Bildschirm in einem Taxi bis hin zu riesigen Stadtmedien — aus einem einzigen Zentrum, nahtlos, intelligent und in Echtzeit. Von der Konzeption über die individuelle Hardware-Produktion bis zum Content-Streaming und der Vor-Ort-Installation bringen wir alle Prozesse des digitalen Rundfunks unter einem Dach zusammen. Leistungsstarke Hardware, intelligente Inhalte, unterbrechungsfreier Zugang: Gestalten Sie die Zukunft des digitalen Rundfunks.',
     },
-    color: '#6B8FA8',
+    color: '#5F93C4',
     height: 100,
     logo: '/logo.svg',
     website: 'https://mysignage-corporate-tv29.bolt.host/',
@@ -106,10 +108,10 @@ export const companies: Company[] = [
       en: 'Welcome to the next-generation shopping era where checkout queues, waiting, and wasted time come to an end. With our advanced AI and computer vision technology, we make the retail experience entirely invisible and effortless. From the moment you step into the store, our smart cameras instantly detect the products you pick, add them to your digital cart, and you simply walk out. Payment is completed in seconds from your secure digital wallet in the background; your receipt and shopping statement arrive instantly on your phone. Staffless, checkoutless, and uninterrupted. We build the future of retail today, merging physical shopping with the speed of the digital world. Step in, pick, and walk out; leave the rest to our technology.',
       de: 'Willkommen im Einkaufszeitalter der nächsten Generation, in dem Kassenschlangen, Wartezeiten und Zeitverlust ein Ende haben. Mit unserer fortschrittlichen KI- und Computer-Vision-Technologie machen wir das Einkaufserlebnis völlig unsichtbar und mühelos. Sobald Sie den Laden betreten, erkennen unsere intelligenten Kameras die von Ihnen ausgewählten Produkte sofort, fügen sie Ihrem digitalen Warenkorb hinzu, und Sie gehen einfach hinaus. Die Zahlung wird im Hintergrund in Sekunden aus Ihrer sicheren digitalen Brieftasche abgeschlossen; Ihre Quittung und Ihre Einkaufsabrechnung erreichen sofort Ihr Telefon. Personallos, kassenlos und unterbrechungsfrei. Wir bauen die Zukunft des Einzelhandels heute und verbinden physisches Einkaufen mit der Geschwindigkeit der digitalen Welt. Treten Sie ein, wählen Sie aus und gehen Sie; den Rest übernehmen wir mit unserer Technologie.',
     },
-    color: '#5C7A6E',
+    color: '#5FBB8C',
     height: 100,
     logo: '/logo.svg',
-    website: 'https://selfgrocery-autonomo-bgxz.bolt.host/',
+    website: 'https://selfgrocery.com/',
   },
   {
     id: 'greenvia',
@@ -121,7 +123,7 @@ export const companies: Company[] = [
       en: 'We digitalize all waste management processes for a sustainable future and circular economy, turning every step in the field into data. With our cloud-based automation platform developed for companies operating in the waste collection and recycling sector, we digitalize all processes end-to-end — from field operations to route optimization, from vehicle tracking to regulatory reporting. By making complex and hard-to-track operational processes transparent, traceable and efficient from a single center, we help businesses reduce costs while maximizing control over their environmental impact. Without bearing hardware and infrastructure costs, move your waste management to the technology of the future with the speed and flexibility of the cloud. Smart processes, transparent operations, sustainable future: the digital transformation point of waste management.',
       de: 'Wir digitalisieren alle Abfallwirtschaftsprozesse für eine nachhaltige Zukunft und Kreislaufwirtschaft und verwandeln jeden Schritt vor Ort in Daten. Mit unserer cloudbasierten Automatisierungsplattform, die für Unternehmen im Bereich Abfallsammlung und Recycling entwickelt wurde, digitalisieren wir alle Prozesse End-to-End — von Feldoperationen über Routenoptimierung bis hin zur Fahrzeugverfolgung und regulatorischen Berichterstattung. Indem wir komplexe und schwer nachverfolgbare operative Prozesse aus einem einzigen Zentrum transparent, nachverfolgbar und effizient machen, helfen wir Unternehmen, Kosten zu senken und gleichzeitig die Kontrolle über ihre Umweltauswirkungen zu maximieren. Ohne Hardware- und Infrastrukturkosten zu tragen, bringen Sie Ihr Abfallmanagement mit der Geschwindigkeit und Flexibilität der Cloud in die Technologie der Zukunft. Intelligente Prozesse, transparente Operationen, nachhaltige Zukunft: der digitale Transformationspunkt der Abfallwirtschaft.',
     },
-    color: '#4A7A5C',
+    color: '#7CB35C',
     height: 100,
     logo: '/logo.svg',
     website: 'https://green-via.com/',
@@ -136,7 +138,7 @@ export const companies: Company[] = [
       en: 'The Assurance of Digital Transformation, the Future of Financial Technologies. In the new economic era shaped by the speed of technology, having a robust software infrastructure is no longer a choice but a fundamental requirement for sustainable success. Secure, scalable, and intelligent software architectures are the most critical force determining an institution\u2019s position in the market and propelling it ahead of the competition. We manage the high-security world of financial technologies with our expertise, developing tailor-made custom software solutions that perfectly fit your company\u2019s unique needs. With our vision of transforming complex financial operations into seamless processes, we become your institution\u2019s most powerful strategic partner in the digital realm. Our purpose is to elevate your business to the future by combining the most advanced technologies with high data security and a flawless user experience. We build systems that not only meet today\u2019s needs but also flexibly support tomorrow\u2019s growth goals. Let\u2019s build a secure, innovative, and boundary-breaking digital future together.',
       de: 'Die Garantie der digitalen Transformation, die Zukunft der Finanztechnologien. In der neuen wirtschaftlichen Ära, die durch das Tempo der Technologie geprägt ist, ist eine robuste Software-Infrastruktur keine Wahl mehr, sondern eine Grundvoraussetzung für nachhaltigen Erfolg. Sichere, skalierbare und intelligente Software-Architekturen sind die kritischste Kraft, die die Position eines Unternehmens auf dem Markt bestimmt und es vor den Wettbewerb katapultiert. Wir verwalten die hochsichere Welt der Finanztechnologien mit unserer Expertise und entwickeln maßgeschneiderte Softwarelösungen, die perfekt auf die einzigartigen Bedürfnisse Ihres Unternehmens zugeschnitten sind. Mit unserer Vision, komplexe Finanzoperationen in nahtlose Prozesse zu verwandeln, werden wir der stärkste strategische Partner Ihres Unternehmens im digitalen Bereich. Unser Ziel ist es, Ihr Unternehmen in die Zukunft zu heben, indem wir fortschrittlichste Technologien mit hoher Datensicherheit und makelloser Benutzererfahrung verbinden. Wir bauen Systeme, die nicht nur die heutigen Bedürfnisse erfüllen, sondern auch die Wachstumsziele von morgen flexibel unterstützen. Gestalten wir gemeinsam eine sichere, innovative und grenzenüberschreitende digitale Zukunft.',
     },
-    color: '#7B6B8A',
+    color: '#9478C4',
     height: 100,
     logo: '/logo.svg',
     website: 'https://misgate.com/',
@@ -151,10 +153,11 @@ export const companies: Company[] = [
       en: 'Vision-based access control solution. With AI-powered camera systems, we provide license plate recognition, person detection and automatic passage approval. We deliver security and efficiency together.',
       de: 'Bildbasierte Zugangskontrolllösung. Mit KI-gestützten Kamerasystemen bieten wir Kennzeichen-Erkennung, Personenerkennung und automatische Passiergenehmigung. Wir liefern Sicherheit und Effizienz in einem.',
     },
-    color: '#5C8A72',
+    color: '#4FB8C4',
     height: 100,
     logo: '/logo.svg',
     website: 'https://visiongate.com/',
+    comingSoon: true,
   },
   {
     id: 'gatement',
@@ -166,7 +169,7 @@ export const companies: Company[] = [
       en: 'We accelerate the flow of global commerce with our borderless, secure and uninterrupted digital payment infrastructure. With our advanced financial technology and scalable infrastructure, we transform complex payment processes of businesses into a flexible, fast and fully secure experience. From multi-currency management to smart payment routing systems, from digital wallet integrations to international transfer networks, we enable all financial traffic to be managed through a single powerful gateway. We bring together in one place all the infrastructure you need to grow in global markets and offer your users a seamless financial experience. Secure infrastructure, uninterrupted payment flow, limitless growth: the next-generation payment gateway for global commerce.',
       de: 'Wir beschleunigen den globalen Handel mit unserer grenzenlosen, sicheren und unterbrechungsfreien digitalen Zahlungsinfrastruktur. Mit unserer fortschrittlichen Finanztechnologie und skalierbaren Infrastruktur verwandeln wir komplexe Zahlungsprozesse von Unternehmen in ein flexibles, schnelles und vollständig sicheres Erlebnis. Von der Multi-Währungs-Verwaltung über intelligente Zahlungs-Routing-Systeme bis hin zu digitalen Brieftaschen-Integrationen und internationalen Transfernetzwerken ermöglichen wir die Verwaltung des gesamten Finanzverkehrs über ein einziges leistungsstarkes Gateway. Wir vereinen an einem Ort die gesamte Infrastruktur, die Sie benötigen, um auf globalen Märkten zu wachsen und Ihren Nutzern ein nahtloses Finanzerlebnis zu bieten. Sichere Infrastruktur, unterbrechungsfreier Zahlungsfluss, grenzenloses Wachstum: das Zahlungs-Gateway der nächsten Generation für den globalen Handel.',
     },
-    color: '#9C5B5B',
+    color: '#D97070',
     height: 100,
     logo: '/logo.svg',
     website: 'https://www.gatement.com/',
@@ -181,7 +184,7 @@ export const companies: Company[] = [
       en: 'TICKETCUT is an innovative event and ticketing platform designed to make ticket sales easy, secure, and enjoyable across a wide range of events — from concerts to theater, festivals to sports. Our goal is to enable users to reach their favorite events with just a few clicks, while providing organizers with a powerful, transparent, and efficient infrastructure for ticket sales, management, and promotion. As TICKETCUT, we digitalize the event world and create a flawless experience for both attendees and event organizers. Our platform enables users to purchase tickets quickly, securely, and easily, while allowing organizers to manage their events through a single panel, track sales in real time, and reach their target audience more effectively.',
       de: 'TICKETCUT ist eine innovative Event- und Ticketing-Plattform, die dafür entwickelt wurde, den Ticketverkauf über ein breites Spektrum von Veranstaltungen — von Konzerten über Theater, Festivals bis hin zu Sportevents — einfach, sicher und angenehm zu gestalten. Unser Ziel ist es, Nutzern den Zugang zu ihren Lieblingsveranstaltungen mit nur wenigen Klicks zu ermöglichen und gleichzeitig Veranstaltern eine leistungsstarke, transparente und effiziente Infrastruktur für Ticketverkauf, Verwaltung und Werbung zu bieten. Als TICKETCUT digitalisieren wir die Event-Welt und schaffen ein makelloses Erlebnis für sowohl Teilnehmer als auch Veranstalter. Unsere Plattform ermöglicht es Nutzern, Tickets schnell, sicher und einfach zu erwerben, während Veranstalter ihre Events über ein einziges Panel verwalten, Verkäufe in Echtzeit verfolgen und ihr Zielpublikum effektiver erreichen können.',
     },
-    color: '#3D5A6C',
+    color: '#7480C4',
     height: 100,
     logo: '/logo.svg',
     website: 'https://www.ticketcut.com/',
@@ -194,4 +197,10 @@ export const uiText = {
   close: { tr: 'Kapat', en: 'Close', de: 'Schließen' },
   languageName: { tr: 'Türkçe', en: 'English', de: 'Deutsch' },
   partnerLogin: { tr: 'Partner Girişi', en: 'Partner Login', de: 'Partner-Login' },
+  comingSoonTitle: { tr: 'Yakında', en: 'Coming Soon', de: 'Demnächst' },
+  comingSoonMessage: {
+    tr: 'Bu sayfa yakında yayında olacak.',
+    en: 'This page will be live soon.',
+    de: 'Diese Seite wird bald verfügbar sein.',
+  },
 } as const;

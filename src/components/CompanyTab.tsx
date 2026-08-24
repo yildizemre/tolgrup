@@ -34,7 +34,7 @@ export default function CompanyTab({ company, lang, active, collapsed, onActivat
     >
       {/* vertical label */}
       <span
-        className="vertical-rl-up absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[11px] font-bold uppercase tracking-[0.2em] text-white"
+        className="vertical-rl-up absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[14px] font-bold uppercase tracking-[0.2em] text-white"
       >
         {label}
       </span>

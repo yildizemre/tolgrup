@@ -164,7 +164,7 @@ function ColumnBar({
       transition={{ type: 'spring', stiffness: 260, damping: 30 }}
     >
       <span
-        className="vertical-rl-up absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[11px] font-bold uppercase tracking-[0.2em] text-white lg:text-[12px]"
+        className="vertical-rl-up absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[14px] font-bold uppercase tracking-[0.2em] text-white lg:text-[16px]"
       >
         {company.name[lang]}
       </span>
@@ -291,7 +291,7 @@ function MobileCompanies({
             className="focus-ring flex min-h-[64px] w-full items-center justify-center px-3 transition-transform active:scale-[0.97]"
             style={{ backgroundColor: c.color }}
           >
-            <span className="font-display text-[13px] font-bold uppercase tracking-[0.12em] text-white">
+            <span className="font-display text-[16px] font-bold uppercase tracking-[0.12em] text-white">
               {c.name[lang]}
             </span>
           </button>
@@ -349,9 +349,9 @@ function MobileMenu({
               className="focus-ring flex min-h-[56px] w-full items-center px-5 transition-transform active:scale-[0.98]"
               style={{ backgroundColor: c.color }}
             >
-              <span className="font-display text-[15px] font-bold uppercase tracking-[0.15em] text-white">
-                {c.name[lang]}
-              </span>
+            <span className="font-display text-[18px] font-bold uppercase tracking-[0.15em] text-white">
+              {c.name[lang]}
+            </span>
             </button>
           ))}
         </div>
